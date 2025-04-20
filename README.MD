@@ -21,16 +21,16 @@ Provided in this code example is an answer for this question. Besides it is also
 ### How to test
 
 1. In [build.gradle.kts](build.gradle.kts) comment out line with provided TestNG listener:<br/>
-```listeners.add("org.example.testng.config.GroupsAlterSuiteListener")```
+   ```listeners.add("org.example.testng.config.GroupsAlterSuiteListener")```
 2. Run `./gradlew clean test`. And you'll see that all tests run (and it's ok):<br/>
-<img src="docs/all_tests.png" alt="all_tests" style="width:200px;"/>
+   <img src="docs/all_tests.png" alt="all_tests" style="width:500px;"/>
 3. Run tests with groups `./gradlew clean test -Dgroups="group1,group3"`.<br/>
-And you'll see that all tests which contains group1 OR group3 run:<br/>
-<img src="docs/without_groups_selector.png" alt="without_groups_selector" style="width:200px;"/>
+   And you'll see that all tests which contains group1 OR group3 run:<br/>
+   <img src="docs/without_groups_selector.png" alt="without_groups_selector" style="width:500px;"/>
 4. In [build.gradle.kts](build.gradle.kts) uncomment line with provided TestNG listener:<br/>
-```listeners.add("org.example.testng.config.GroupsAlterSuiteListener")```
+   ```listeners.add("org.example.testng.config.GroupsAlterSuiteListener")```
 5. Run tests with groups again `./gradlew clean test -Dgroups="group1,group3"`.<br/>
-And you'll see that now only tests which contains group1 AND group3 run:<br/>
-<img src="docs/with_groups_selector.png" alt="with_groups_selector" style="width:200px;"/>
+   And you'll see that now only tests which contains group1 AND group3 run:<br/>
+   <img src="docs/with_groups_selector.png" alt="with_groups_selector" style="width:500px;"/>
 
 
